@@ -6,13 +6,13 @@ import { decodeSuiPrivateKey } from '@mysten/sui.js/cryptography';
 
 const client = new SuiClient({ url: getFullnodeUrl('devnet') });
 
-const { secretKey } = decodeSuiPrivateKey('suiprivkey1qza8ay8cts039ecz6nlsjfkmw5xyejmwtdtlhgs0sjp3ysteqc0zs306jze')
+const { secretKey } = decodeSuiPrivateKey('private-key')
 const keypair = Ed25519Keypair.fromSecretKey(secretKey);
 const PACKAGE_ID = '0x01a4916393573e9f3e89ca6f8a0a391087386a23b117370219ee7eb9ee1a000c';
 const MODULE_NAME = 'tomcrown';
 const STRUCT_NAME = 'TOMCROWN';
 const TREASURY_CAP_ID = '0xbb36632379b68dc77504df98977feafe5a7c9a8ba60e017694d3eb1d8b09d34f';
-const RECEPIENT_ADDRESS = '0x7ac2b430a1580dc3c8f58f08d98218b9bc810cd6d1a3e854f07653f19731ee72';
+const RECEPIENT_ADDRESS = 'address';
 
 
 async function main() {
